@@ -22,9 +22,9 @@ BaseSeleniumTest.run(async (test) => {
   const sepoliaOption = await test.waitForElement(By.css('button[data-index="4"]'));
   await sepoliaOption.click();
   
-  // Select the azorius-erc721 option
-  const azoriusErc721Option = await test.waitForElement(By.css('[data-testid="choose-azorius-erc721"]'));
-  await azoriusErc721Option.click();
+  // Select the governor-erc721 option
+  const governorErc721Option = await test.waitForElement(By.css('[data-testid="choose-governor-erc721"]'));
+  await governorErc721Option.click();
   
   // Find and click the skip next button
   const skipNextButton = await test.waitForElement(By.css('[data-testid="create-skipNextButton"]'));

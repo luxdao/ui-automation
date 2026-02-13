@@ -1,6 +1,6 @@
-# Decent UI Automation
+# DAO UI Automation
 
-Automated UI regression testing for the Decent webapp using Selenium WebDriver and TypeScript.
+Automated UI regression testing for the DAO webapp using Selenium WebDriver and TypeScript.
 
 ## Quick Start
 

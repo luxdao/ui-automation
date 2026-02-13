@@ -1,7 +1,7 @@
 // Static environments
 export const environments: Record<string, string> = {
-  develop: 'https://develop.decent-interface.pages.dev/',
-  production: 'https://app.decentdao.org/',
+  develop: 'https://develop.interface.pages.dev/',
+  production: 'https://app.luxdao.org/',
 };
 
 // Cache for release URL
@@ -11,7 +11,7 @@ let releaseUrl: string | null = null;
  * Fetches the latest release tag from GitHub and constructs the release URL
  */
 async function getLatestReleaseUrl(): Promise<string> {
-  const response = await fetch('https://api.github.com/repos/decentdao/decent-app/releases/latest');
+  const response = await fetch('https://api.github.com/repos/luxdao/app/releases/latest');
   
   if (!response.ok) {
     throw new Error(`GitHub API returned status ${response.status}: ${response.statusText}`);
@@ -26,7 +26,7 @@ async function getLatestReleaseUrl(): Promise<string> {
   
   // Convert periods to dashes: "v0.16.0" -> "v0-16-0"
   const urlVersion = tagName.replace(/\./g, '-');
-  const releaseUrl = `https://release-${urlVersion}.decent-interface.pages.dev/`;
+  const releaseUrl = `https://release-${urlVersion}.interface.pages.dev/`;
   
   console.log(`[environments] Using latest release: ${tagName} -> ${releaseUrl}`);
   return releaseUrl;

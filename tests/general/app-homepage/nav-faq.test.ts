@@ -33,11 +33,11 @@ BaseSeleniumTest.run(async (test) => {
   // Wait for the page to load and check the URL
   await test.driver!.wait(async () => {
     const currentUrl = await test.driver!.getCurrentUrl();
-    return currentUrl.includes('docs.decentdao.org');
+    return currentUrl.includes('docs.luxdao.org');
   }, 5000);
   
   const currentUrl = await test.driver!.getCurrentUrl();
-  const expectedUrl = 'https://docs.decentdao.org/app/learn-more/faq';
+  const expectedUrl = 'https://docs.luxdao.org/app/learn-more/faq';
   
   if (!currentUrl.includes(expectedUrl)) {
     throw new Error(`Expected URL to be ${expectedUrl}, but got ${currentUrl}`);
